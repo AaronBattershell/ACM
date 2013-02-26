@@ -13,7 +13,7 @@ struct People {
         int moneyGiven;          //How much money that person gives
         int giftsGiven;          //How many gifts this person gives
         int netMoney;            //Net total of money given
-        vector<string>givenList; //List of people who gets gifts
+        vector<string>givenList; //List of people who get gifts
 };
 
 int main()
