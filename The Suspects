@@ -1,3 +1,11 @@
+//**********************************************************************************************************
+// Aaron Battershell
+// 3/3/13
+// uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3638
+//**********************************************************************************************************
+
+
+
 #include <algorithm>
 #include <iostream>
 #include <vector>
@@ -46,7 +54,7 @@ int main()
                             changed = true;
                             list[i].infected = true;
 
-                            //Add errybdy from dis lst to da infcted list!
+                            //Include members of this list to infected list
                             for(int h = 0; h < list[i].people.size(); h++)
                                 infectedList.push_back(list[i].people[h]);
                             break;
