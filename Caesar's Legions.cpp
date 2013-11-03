@@ -31,18 +31,18 @@ struct armyInfo {
 
 int getMaxPermu(map<armyInfo, int> &dp, armyInfo army, int menLimit, int horseLimit) {
 	if (army.man < 0 || army.horse < 0 || army.manConsec > menLimit || army.horseConsec > horseLimit) {
-        return 0;
+        	return 0;
 	} else if (army.man == 0 && army.horse == 0) {
-        return 1;
+        	return 1;
 	} else if (dp.count(army)) {
-        return dp[army];
+        	return dp[army];
 	} else {
 		armyInfo armyMan(army.man-1, army.horse, army.manConsec+1, 0); 
 		armyInfo armyHorse(army.man, army.horse-1, 0, army.horseConsec+1);
     
-        dp[army] = (getMaxPermu(dp, armyMan, menLimit, horseLimit) + getMaxPermu(dp, armyHorse, menLimit, horseLimit)) % 100000000;
-        return dp[army];
-    }
+        	dp[army] = (getMaxPermu(dp, armyMan, menLimit, horseLimit) + getMaxPermu(dp, armyHorse, menLimit, horseLimit)) % 100000000;
+        	return dp[army];
+    	}
 }
 
 int main() {
