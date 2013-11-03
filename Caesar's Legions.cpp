@@ -42,7 +42,7 @@ int getMaxPermu(map<armyInfo, int> &dp, armyInfo army, int menLimit, int horseLi
     
         	dp[army] = (getMaxPermu(dp, armyMan, menLimit, horseLimit) + getMaxPermu(dp, armyHorse, menLimit, horseLimit)) % 100000000;
         	return dp[army];
-    	}
+        }
 }
 
 int main() {
