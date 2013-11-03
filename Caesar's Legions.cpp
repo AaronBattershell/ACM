@@ -53,5 +53,5 @@ int main() {
 	armyInfo army(menCount, horseCount, 0, 0);
 
 	cout << getMaxPermu(dp, army, menLimit, horseLimit);
-  	return 0;
+	return 0;
 }
