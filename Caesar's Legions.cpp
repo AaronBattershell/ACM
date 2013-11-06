@@ -16,17 +16,19 @@ struct armyInfo {
 	}
 	int man, horse, manConsec, horseConsec;
 
-	bool operator < (const armyInfo& n) const {
-		if (man == n.man && horse == n.horse && manConsec == n.manConsec) {
-			return horseConsec < n.horseConsec;
-		} else if (man == n.man && horse == n.horse) {
-			return manConsec < n.manConsec;
-		} else if (man == n.man) {
-			return horse < n.horse;
-		} else {
-			return man < n.man;
-		}
-	}
+        bool operator < (const armyInfo& n) const {
+                if (horseConsec != n.horseConsec) {
+                        return (horseConsec < n.horseConsec);
+                } else if (manConsec != n.manConsec) {
+                        return (manConsec < n.manConsec);
+                } else if (horse != n.horse) {
+                        return (horse < n.horse);
+                } else if (man != n.man){
+                        return (man < n.man);
+                } else {
+                	return false;
+                }
+        }
 };
 
 int getMaxPermu(map<armyInfo, int> &dp, armyInfo army, int menLimit, int horseLimit) {
