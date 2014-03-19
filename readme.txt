@@ -1,0 +1,2 @@
+The files included in this repository are ACM problems that have been judged to produce the correct output. 
+These programs, being that they are ACM style, may not be best engineered for normal context.
